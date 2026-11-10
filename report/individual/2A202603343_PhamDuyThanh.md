@@ -50,8 +50,11 @@ Phần cần giảng viên làm rõ:
 | mean_iou_of_matches | 0.8614 | 0.8584 |
 | passed | false | false |
 
-Dẫn tới `outputs/annotation_evaluation.json` trong repo. Nếu rework, ghi ảnh, lỗi đã kiểm, quyết định sửa/giữ và lý do. Không suy nguyên nhân chỉ từ FP/FN. Không có rework thì ghi rõ.
-
+Rework:
+  - Một số khung nhãn ở drive_001 - 003 đang gán cho một số xe ở khá xa và mờ -> bỏ khung đi
+  - `drive_014` khung chưa bao trọn xe đen -> kéo cho đủ bao trọn xe
+  - `drive_041`, `drive_050` thiếu nhiều nhãn -> tiếp tục gán vào
+  
 ## 5. Kết quả YOLO
 
 - Runtime, GPU/CPU, phiên bản Ultralytics và Torch: Google Colab, GPU Tesla T4 ; Python 3.13.16, Ultralytics 8.4.208, Torch 2.14.1+cu130. Model YOLO26n (fused: 121 layers, 2,390,464 tham số, 5.4 GFLOPs).
